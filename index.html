@@ -1,0 +1,1420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maahera Noushin K M | AI & Data Science Portfolio</title>
+    <meta
+      name="description"
+      content="Official portfolio of Maahera Noushin K M - AI & Data Science Student, Aspiring AI Engineer specializing in Machine Learning, Computer Vision, and Intelligent Systems."
+    />
+    <meta property="og:title" content="Maahera Noushin K M | AI & Data Science Portfolio" />
+    <meta
+      property="og:description"
+      content="Official portfolio of Maahera Noushin K M - AI & Data Science Student, Aspiring AI Engineer specializing in Machine Learning, Computer Vision, and Intelligent Systems."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Plus Jakarta Sans (Body), Outfit (Headings), JetBrains Mono (Data & Code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
+         1. STICKY NAVIGATION BAR (Top Bar Contract: Brand - Links - Actions)
+         ======================================================================== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <!-- Zone 1: Single text element wordmark with AI dot -->
+        <a href="#home" class="nav-brand" aria-label="Maahera Noushin Home">
+          <span>Maahera Noushin</span>
+          <span class="brand-dot">.</span>
+          <span class="brand-badge">AI/DS</span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#certifications" class="nav-link">Certifications</a>
+          <a href="#achievements" class="nav-link">Achievements</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Zone 3: Actions & Controls -->
+        <div class="nav-actions">
+          <!-- Light / Dark Mode Toggle -->
+          <button
+            type="button"
+            class="theme-toggle-btn"
+            id="theme-toggle-btn"
+            aria-label="Toggle theme appearance"
+            title="Toggle theme appearance"
+          >
+            <!-- Moon Icon (for Dark Mode) -->
+            <svg
+              class="theme-icon-moon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <!-- Sun Icon (for Light Mode) -->
+            <svg
+              class="theme-icon-sun"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </button>
+
+          <!-- Quick Contact CTA -->
+          <a href="#contact" class="btn-nav-cta">
+            <span>Get in Touch</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button
+            type="button"
+            class="mobile-toggle"
+            id="mobile-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ========================================================================
+           2. HERO SECTION
+           ======================================================================== -->
+      <section class="hero-section" id="home">
+        <!-- Interactive Neural Synapse Particle Canvas -->
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+        <!-- Ambient Backdrop Light Glow -->
+        <div class="hero-glow-bg" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <!-- Hero Text Content -->
+          <div class="hero-content reveal-on-scroll">
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-pulse" aria-hidden="true"></span>
+              <span>Available for Internships & AI Projects</span>
+            </div>
+
+            <h1 class="hero-name">MAAHERA NOUSHIN K M</h1>
+
+            <div class="hero-role-wrapper">
+              <span class="typing-text" id="typing-text">AI & Data Science Student</span>
+              <span class="typing-cursor" aria-hidden="true">|</span>
+            </div>
+
+            <p class="hero-description">
+              I am passionate about Artificial Intelligence, Data Science, Machine Learning, and
+              building intelligent solutions to real-world problems.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn-primary">
+                <span>View My Projects</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </a>
+
+              <a href="#contact" class="btn-secondary">
+                <span>Contact Me</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Avatar Card & Floating Elements -->
+          <div class="hero-visual reveal-on-scroll">
+            <div class="hero-card-wrapper">
+              <!-- Floating Pill 1 (Top Right) -->
+              <div class="floating-chip chip-top-right">
+                <div class="chip-icon">🤖</div>
+                <div>
+                  <div class="chip-text-title">B.Tech AI & DS</div>
+                  <div class="chip-text-sub">Specialized Scholar</div>
+                </div>
+              </div>
+
+              <!-- Profile Image Container -->
+              <div class="hero-avatar-frame">
+                <img
+                  src="./assets/images/profile.jpg"
+                  alt="Portrait of Maahera Noushin K M, AI & Data Science Student"
+                  class="hero-avatar-img"
+                  loading="eager"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+
+              <!-- Floating Pill 2 (Bottom Left) -->
+              <div class="floating-chip chip-bottom-left">
+                <div class="chip-icon">⚡</div>
+                <div>
+                  <div class="chip-text-title">Machine Learning</div>
+                  <div class="chip-text-sub">Model Optimization</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Down Prompt -->
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+          <div class="mouse-icon">
+            <div class="mouse-wheel"></div>
+          </div>
+          <span>Scroll Down</span>
+        </a>
+      </section>
+
+      <!-- ========================================================================
+           3. ABOUT ME SECTION
+           ======================================================================== -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Professional Profile</div>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+              Driven by curiosity, fueled by data, and focused on designing intelligent systems with measurable real-world utility.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <!-- Narrative Column -->
+            <div class="about-narrative reveal-on-scroll">
+              <p class="about-paragraph">
+                Hello! I am <strong>Maahera Noushin K M</strong>, an Artificial Intelligence and Data Science undergraduate dedicated to turning mathematical formulations and raw datasets into high-performance, intelligent computational models.
+              </p>
+
+              <p class="about-paragraph">
+                My academic journey is anchored in core computer science foundations, statistical inference, heuristic algorithms, and modern deep learning frameworks. I thrive at the crossroads where theory meets hands-on implementation—whether designing autonomous drone pathfinding engines or developing media forensic classifiers.
+              </p>
+
+              <!-- Editorial Key Aspects Grid -->
+              <div class="about-highlights-grid">
+                <div class="highlight-item">
+                  <div class="highlight-icon">🎓</div>
+                  <div>
+                    <div class="highlight-label">Academic Background</div>
+                    <div class="highlight-text">B.Tech in AI & Data Science (2023 - 2027)</div>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">🔬</div>
+                  <div>
+                    <div class="highlight-label">Core Interests</div>
+                    <div class="highlight-text">Computer Vision, Deep Learning, Search Algorithms</div>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">🚀</div>
+                  <div>
+                    <div class="highlight-label">Currently Learning</div>
+                    <div class="highlight-text">Edge AI Inference, PyTorch Transformers, LLM fine-tuning</div>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">🎯</div>
+                  <div>
+                    <div class="highlight-label">Career Goal</div>
+                    <div class="highlight-text">AI Engineer / ML Specialist in high-impact tech & R&D</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile & Statistics Card -->
+            <div class="about-stats-card reveal-on-scroll">
+              <div class="stats-card-header">
+                <h3 class="stats-card-title">Key Milestones</h3>
+                <p class="stats-card-subtitle">Verified academic & technical progress</p>
+              </div>
+
+              <div class="stats-numbers-grid">
+                <div class="stat-box">
+                  <div class="stat-value" data-counter="12" data-suffix="+">12+</div>
+                  <div class="stat-label">Projects Completed</div>
+                </div>
+
+                <div class="stat-box">
+                  <div class="stat-value" data-counter="8" data-suffix="+">8+</div>
+                  <div class="stat-label">Certifications</div>
+                </div>
+
+                <div class="stat-box">
+                  <div class="stat-value" data-counter="15" data-suffix="+">15+</div>
+                  <div class="stat-label">Technologies Learned</div>
+                </div>
+
+                <div class="stat-box">
+                  <div class="stat-value" data-counter="100" data-suffix="%">100%</div>
+                  <div class="stat-label">Commitment to AI</div>
+                </div>
+              </div>
+
+              <div class="stats-footer-note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                <span>Specialization: Artificial Intelligence & Data Science</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           4. SKILLS SECTION
+           ======================================================================== -->
+      <section class="section" id="skills" style="background-color: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Technical Competencies</div>
+            <h2 class="section-title">Skills & Capabilities</h2>
+            <p class="section-subtitle">
+              A balanced blend of programming languages, machine learning frameworks, data analytics pipelines, and developer tooling.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- 1. Programming -->
+            <div class="skill-category-card reveal-on-scroll">
+              <div class="skill-category-header">
+                <div class="skill-cat-icon">💻</div>
+                <div>
+                  <h3 class="skill-cat-title">Programming</h3>
+                  <p class="skill-cat-desc">Core languages & algorithms</p>
+                </div>
+              </div>
+
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="90"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Java</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="80"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">C</span>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="75"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-percent">82%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="82"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. AI & Data Science -->
+            <div class="skill-category-card reveal-on-scroll">
+              <div class="skill-category-header">
+                <div class="skill-cat-icon">🧠</div>
+                <div>
+                  <h3 class="skill-cat-title">AI & Data Science</h3>
+                  <p class="skill-cat-desc">Intelligent systems & modeling</p>
+                </div>
+              </div>
+
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Artificial Intelligence</span>
+                    <span class="skill-percent">88%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="88"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Machine Learning</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="85"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Data Science & Analysis</span>
+                    <span class="skill-percent">84%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="84"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Statistics & Probability</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="80"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Search Algorithms (A*, etc.)</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="85"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Web Development -->
+            <div class="skill-category-card reveal-on-scroll">
+              <div class="skill-category-header">
+                <div class="skill-cat-icon">🌐</div>
+                <div>
+                  <h3 class="skill-cat-title">Web Development</h3>
+                  <p class="skill-cat-desc">Modern user interfaces</p>
+                </div>
+              </div>
+
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">HTML5</span>
+                    <span class="skill-percent">92%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="92"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">CSS3 (Responsive & Grid)</span>
+                    <span class="skill-percent">88%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="88"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Vanilla JavaScript (ES6+)</span>
+                    <span class="skill-percent">82%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="82"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">UI / UX & Accessibility</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="80"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Tools & Frameworks -->
+            <div class="skill-category-card reveal-on-scroll">
+              <div class="skill-category-header">
+                <div class="skill-cat-icon">⚙️</div>
+                <div>
+                  <h3 class="skill-cat-title">Tools & Platforms</h3>
+                  <p class="skill-cat-desc">Scientific computing & versioning</p>
+                </div>
+              </div>
+
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">MATLAB</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="80"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Google Colab</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="90"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Jupyter Notebook</span>
+                    <span class="skill-percent">92%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="92"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Git & GitHub</span>
+                    <span class="skill-percent">86%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="86"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           5. PROJECTS SHOWCASE SECTION
+           ======================================================================== -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Engineered Solutions</div>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">
+              Applied artificial intelligence, computer vision pipelines, and data analytics systems solving tangible technical challenges.
+            </p>
+          </div>
+
+          <!-- Functional Category Filter Buttons -->
+          <div class="projects-filter-bar reveal-on-scroll" role="tablist" aria-label="Project Categories">
+            <button type="button" class="filter-btn active" data-filter="all">All Projects</button>
+            <button type="button" class="filter-btn" data-filter="ai">AI</button>
+            <button type="button" class="filter-btn" data-filter="datascience">Data Science</button>
+            <button type="button" class="filter-btn" data-filter="web">Web Development</button>
+          </div>
+
+          <!-- Project Cards Grid -->
+          <div class="projects-grid">
+            <!-- Project 0: MediShield AI (Featured Live Deployment) -->
+            <article class="project-card reveal-on-scroll" data-category="ai">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-medishield.jpg"
+                  alt="MediShield AI Healthcare Platform Interface"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border-color: rgba(16, 185, 129, 0.4);">
+                  ● Live Deployment
+                </span>
+              </div>
+
+              <div class="project-content">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                  <h3 class="project-title" style="margin-bottom: 0;">MediShield AI</h3>
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #10b981; font-weight: 600;">Production</span>
+                </div>
+                <p class="project-description">
+                  An intelligent healthcare platform engineered to protect sensitive medical telemetry, provide automated clinical anomaly triage, and secure electronic health records against manipulation and fraud.
+                </p>
+
+                <!-- Zero-Pill Typographic Tech Stack -->
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Machine Learning</span>
+                  <span class="separator">·</span>
+                  <span>Healthcare AI</span>
+                  <span class="separator">·</span>
+                  <span>Anomaly Detection</span>
+                  <span class="separator">·</span>
+                  <span>Predictive Triage</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://medishield-ai.ai.studio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action primary"
+                    style="font-weight: 700;"
+                  >
+                    <span>Live App</span> ↗
+                  </a>
+                  <button type="button" class="btn-card-action" data-project-key="medishield">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 1: AI Search & Rescue Drone -->
+            <article class="project-card reveal-on-scroll" data-category="ai">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-drone.jpg"
+                  alt="AI Search & Rescue Drone Pathfinding Visualization"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag">Artificial Intelligence</span>
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">AI Search & Rescue Drone</h3>
+                <p class="project-description">
+                  An AI-based search and rescue drone system that uses intelligent pathfinding to identify safe and efficient routes in disaster environments while avoiding obstacles.
+                </p>
+
+                <!-- Zero-Pill Typographic Tech Stack -->
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Artificial Intelligence</span>
+                  <span class="separator">·</span>
+                  <span>A* Search Algorithm</span>
+                  <span class="separator">·</span>
+                  <span>Pathfinding</span>
+                </div>
+
+                <div class="project-actions">
+                  <button type="button" class="btn-card-action primary" data-project-key="drone">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#contact" class="btn-card-action">
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Deepfake Predictor -->
+            <article class="project-card reveal-on-scroll" data-category="ai">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-deepfake.jpg"
+                  alt="Deepfake Machine Learning Predictor Analysis Interface"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag">Machine Learning</span>
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Deepfake Predictor</h3>
+                <p class="project-description">
+                  A machine learning based system designed to identify manipulated or synthetic media using data-driven techniques and convolutional feature classification.
+                </p>
+
+                <!-- Zero-Pill Typographic Tech Stack -->
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Machine Learning</span>
+                  <span class="separator">·</span>
+                  <span>Data Science</span>
+                  <span class="separator">·</span>
+                  <span>Deepfake Detection</span>
+                </div>
+
+                <div class="project-actions">
+                  <button type="button" class="btn-card-action primary" data-project-key="deepfake">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#contact" class="btn-card-action">
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: Future Project Placeholder (Autonomous Edge Vision) -->
+            <article class="project-card reveal-on-scroll" data-category="ai">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-edge-vision.jpg"
+                  alt="Autonomous Edge Vision Hardware Module"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag">Edge AI / Future</span>
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Autonomous Edge Vision System</h3>
+                <p class="project-description">
+                  An upcoming edge AI system designed for real-time visual inspection, edge anomaly classification, and embedded inference on low-power IoT microcontrollers.
+                </p>
+
+                <!-- Zero-Pill Typographic Tech Stack -->
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Embedded AI</span>
+                  <span class="separator">·</span>
+                  <span>Computer Vision</span>
+                  <span class="separator">·</span>
+                  <span>IoT</span>
+                </div>
+
+                <div class="project-actions">
+                  <button type="button" class="btn-card-action primary" data-project-key="edge">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#contact" class="btn-card-action">
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4: Predictive Healthcare Analytics (Data Science) -->
+            <article class="project-card reveal-on-scroll" data-category="datascience">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-deepfake.jpg"
+                  alt="Predictive Healthcare Analytics Diagnostic Dashboard"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag">Data Science</span>
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Predictive Healthcare Analytics</h3>
+                <p class="project-description">
+                  A multi-parameter clinical risk analysis pipeline forecasting cardiovascular anomalies from patient telemetry and longitudinal lab reports.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Pandas</span>
+                  <span class="separator">·</span>
+                  <span>Scikit-Learn</span>
+                  <span class="separator">·</span>
+                  <span>Clinical Analytics</span>
+                </div>
+
+                <div class="project-actions">
+                  <button type="button" class="btn-card-action primary" data-project-key="healthcare">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#contact" class="btn-card-action">
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           6. EDUCATION SECTION (Vertical Modern Timeline)
+           ======================================================================== -->
+      <section class="section" id="education" style="background-color: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Academic Roadmap</div>
+            <h2 class="section-title">Education & Milestones</h2>
+            <p class="section-subtitle">
+              Formal engineering foundation in Artificial Intelligence, computational mathematics, and software systems.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <!-- Timeline Item 1 (Undergraduate) -->
+            <div class="timeline-item left reveal-on-scroll">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <span class="timeline-year">2023 — 2027 (Current)</span>
+                <h3 class="timeline-degree">B.Tech in Artificial Intelligence & Data Science</h3>
+                <div class="timeline-institution">College / University Name [Editable Placeholder]</div>
+
+                <div class="timeline-details">
+                  <div class="timeline-detail-row">
+                    <span class="timeline-detail-label">Relevant Subjects:</span>
+                    <span class="timeline-detail-val">
+                      Data Structures & Algorithms, Deep Learning, Probability & Statistics, Database Management Systems, Neural Networks, Computer Vision
+                    </span>
+                  </div>
+                  <div class="timeline-detail-row">
+                    <span class="timeline-detail-label">Key Highlights:</span>
+                    <span class="timeline-detail-val">
+                      Dean's Honor List, Top 5% in Department, Active Member of the AI & Robotics Research Society
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 (Higher Secondary) -->
+            <div class="timeline-item right reveal-on-scroll">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <span class="timeline-year">2021 — 2023</span>
+                <h3 class="timeline-degree">Higher Secondary Certificate (HSC / 12th Standard)</h3>
+                <div class="timeline-institution">Higher Secondary School [Editable Placeholder]</div>
+
+                <div class="timeline-details">
+                  <div class="timeline-detail-row">
+                    <span class="timeline-detail-label">Major Subjects:</span>
+                    <span class="timeline-detail-val">
+                      Mathematics, Physics, Chemistry, Computer Science
+                    </span>
+                  </div>
+                  <div class="timeline-detail-row">
+                    <span class="timeline-detail-label">Academic Achievement:</span>
+                    <span class="timeline-detail-val">
+                      Graduated with High Distinction (95%+ Aggregate), School Math Olympiad Rank Holder
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           7. CERTIFICATIONS SECTION
+           ======================================================================== -->
+      <section class="section" id="certifications">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Continuous Learning</div>
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">
+              Industry credentials and specialized course completions validating competencies in AI, Data Science, and Scientific Computing.
+            </p>
+          </div>
+
+          <div class="certifications-grid">
+            <!-- Cert 1: MATLAB -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">📐</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">MATLAB Fundamentals & Applied Computing</h3>
+              <div class="cert-org">MathWorks</div>
+              <div class="cert-date">Issued August 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">MW-77492-AI</span>
+                <button type="button" class="btn-view-cert" data-cert-key="matlab">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 2: AI Foundations -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">🤖</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Artificial Intelligence & Deep Learning</h3>
+              <div class="cert-org">DeepLearning.AI</div>
+              <div class="cert-date">Issued November 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">DL-88210-FD</span>
+                <button type="button" class="btn-view-cert" data-cert-key="ai">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 3: Python for Data Science -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">🐍</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Python for Data Science & ML</h3>
+              <div class="cert-org">Coursera / IBM</div>
+              <div class="cert-date">Issued May 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">PY-43901-DS</span>
+                <button type="button" class="btn-view-cert" data-cert-key="python">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 4: Data Science Professional -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">📊</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Data Science Professional Certificate</h3>
+              <div class="cert-org">IBM</div>
+              <div class="cert-date">Issued January 2026</div>
+              <div class="cert-footer">
+                <span class="cert-id">IBM-90112-PC</span>
+                <button type="button" class="btn-view-cert" data-cert-key="datascience">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 5: Machine Learning -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">📈</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Supervised Machine Learning</h3>
+              <div class="cert-org">Stanford Online / Coursera</div>
+              <div class="cert-date">Issued July 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">ST-10398-ML</span>
+                <button type="button" class="btn-view-cert" data-cert-key="ml">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 6: Modern Web Development -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">🌐</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Modern Responsive Web Development</h3>
+              <div class="cert-org">freeCodeCamp</div>
+              <div class="cert-date">Issued March 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">FCC-88301-WD</span>
+                <button type="button" class="btn-view-cert" data-cert-key="web">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           8. ACHIEVEMENTS SECTION
+           ======================================================================== -->
+      <section class="section" id="achievements" style="background-color: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Distinctions & Honors</div>
+            <h2 class="section-title">Achievements</h2>
+            <p class="section-subtitle">
+              Recognition received in hackathons, academic challenges, technical presentations, and project competitions.
+            </p>
+          </div>
+
+          <div class="achievements-grid">
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">🏆</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">1st Place — Smart Campus Hackathon</h3>
+                <p class="achievement-desc">
+                  Led a 4-person team developing an automated resource allocation engine optimizing laboratory electricity consumption with AI sensor feeds.
+                </p>
+                <div class="achievement-meta">State Level · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">🎖️</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Top 10 Finalist — AI Innovation Challenge</h3>
+                <p class="achievement-desc">
+                  Selected among 350+ student teams across the nation for the AI Search & Rescue Drone disaster relief prototype.
+                </p>
+                <div class="achievement-meta">National Competition · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">🎤</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Technical Presentation on Heuristic Search</h3>
+                <p class="achievement-desc">
+                  Presented a technical paper analyzing modified A* heuristic weighting mechanisms for dynamic 3D obstacle avoidance at the National Student Symposium.
+                </p>
+                <div class="achievement-meta">Technical Symposium · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">💡</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Student Workshop Lead: Python for ML</h3>
+                <p class="achievement-desc">
+                  Organized and instructed a 3-day practical hands-on workshop introducing 80+ junior engineering students to Python, NumPy, and Scikit-Learn.
+                </p>
+                <div class="achievement-meta">Campus Peer Mentor · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">💻</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">100+ Days of Code Milestone</h3>
+                <p class="achievement-desc">
+                  Maintained continuous problem-solving consistency across Data Structures, Algorithms, and Machine Learning repositories on GitHub.
+                </p>
+                <div class="achievement-meta">GitHub Coding Consistency · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">⭐</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Academic Merit Scholarship</h3>
+                <p class="achievement-desc">
+                  Awarded the Department Academic Excellence Scholarship for ranking in the upper 5th percentile of the AI & Data Science cohort.
+                </p>
+                <div class="achievement-meta">Academic Year 2024 — 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           9. RESUME SECTION
+           ======================================================================== -->
+      <section class="section" id="resume">
+        <div class="container">
+          <div class="resume-banner reveal-on-scroll">
+            <div class="resume-glow" aria-hidden="true"></div>
+
+            <h2 class="resume-title">Let's build something intelligent together.</h2>
+            <p class="resume-text">
+              I am currently seeking opportunities for internships, technical apprenticeships, and collaborative AI/Data Science projects. Download or preview my complete curriculum vitae below.
+            </p>
+
+            <div class="resume-actions">
+              <a
+                href="#"
+                download="Maahera_Noushin_Resume.pdf"
+                class="btn-primary"
+                id="btn-download-resume"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" x2="12" y1="15" y2="3"></line>
+                </svg>
+                <span>Download Resume</span>
+              </a>
+
+              <button type="button" class="btn-secondary" id="btn-view-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span>View Resume</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           10. CONTACT SECTION
+           ======================================================================== -->
+      <section class="section" id="contact" style="background-color: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Get In Touch</div>
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">
+              Have an internship opening, research inquiry, project collaboration, or question? Send a note or reach out directly.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Contact Info Column -->
+            <div class="contact-info-col reveal-on-scroll">
+              <div class="contact-card-box">
+                <div>
+                  <h3 class="contact-card-title">Direct Inquiries</h3>
+                  <p class="contact-card-subtitle">
+                    Feel free to connect directly via email or professional profiles.
+                  </p>
+                </div>
+
+                <div class="contact-channels">
+                  <!-- Email -->
+                  <a href="mailto:maahera2007@gmail.com" class="contact-channel-item">
+                    <div class="channel-icon">✉️</div>
+                    <div>
+                      <div class="channel-label">Email Address</div>
+                      <div class="channel-val">maahera2007@gmail.com</div>
+                    </div>
+                  </a>
+
+                  <!-- GitHub -->
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-channel-item"
+                  >
+                    <div class="channel-icon">💻</div>
+                    <div>
+                      <div class="channel-label">GitHub Profile</div>
+                      <div class="channel-val">github.com/maahera</div>
+                    </div>
+                  </a>
+
+                  <!-- LinkedIn -->
+                  <a
+                    href="https://linkedin.com/in/maahera-noushin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-channel-item"
+                  >
+                    <div class="channel-icon">🔗</div>
+                    <div>
+                      <div class="channel-label">LinkedIn Profile</div>
+                      <div class="channel-val">linkedin.com/in/maahera-noushin</div>
+                    </div>
+                  </a>
+
+                  <!-- Location -->
+                  <div class="contact-channel-item">
+                    <div class="channel-icon">📍</div>
+                    <div>
+                      <div class="channel-label">Current Location</div>
+                      <div class="channel-val">Tamil Nadu, India</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Functional Contact Form Column -->
+            <div class="contact-form-wrapper reveal-on-scroll">
+              <form id="contact-form" novalidate>
+                <div class="form-grid-row">
+                  <div class="form-group">
+                    <label for="contact-name" class="form-label">Full Name *</label>
+                    <input
+                      type="text"
+                      id="contact-name"
+                      class="form-input"
+                      placeholder="e.g. Sarah Jenkins"
+                      required
+                    />
+                    <div class="form-error-msg" aria-live="polite"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contact-email" class="form-label">Email Address *</label>
+                    <input
+                      type="email"
+                      id="contact-email"
+                      class="form-input"
+                      placeholder="e.g. sarah@company.com"
+                      required
+                    />
+                    <div class="form-error-msg" aria-live="polite"></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject" class="form-label">Subject *</label>
+                  <input
+                    type="text"
+                    id="contact-subject"
+                    class="form-input"
+                    placeholder="e.g. AI Internship Opportunity / Collaboration"
+                    required
+                  />
+                  <div class="form-error-msg" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Message *</label>
+                  <textarea
+                    id="contact-message"
+                    class="form-textarea"
+                    placeholder="Describe your project, team opportunity, or inquiry..."
+                    required
+                  ></textarea>
+                  <div class="form-error-msg" aria-live="polite"></div>
+                </div>
+
+                <button type="submit" class="btn-submit-form" id="contact-submit-btn">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" x2="11" y1="2" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================================================
+         11. FOOTER
+         ======================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand-wrap">
+            <div class="footer-brand">MAAHERA NOUSHIN K M</div>
+            <p class="footer-tagline">
+              AI & Data Science Student · Aspiring AI Engineer passionate about designing intelligent solutions to real-world challenges.
+            </p>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="footer-social-links" aria-label="Social profiles">
+            <a
+              href="mailto:maahera2007@gmail.com"
+              class="social-icon-btn"
+              title="Send an email"
+              aria-label="Email"
+            >
+              ✉️
+            </a>
+            <a
+              href="https://github.com/maahera"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon-btn"
+              title="GitHub Profile"
+              aria-label="GitHub"
+            >
+              💻
+            </a>
+            <a
+              href="https://linkedin.com/in/maahera-noushin"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon-btn"
+              title="LinkedIn Profile"
+              aria-label="LinkedIn"
+            >
+              🔗
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Maahera Noushin K M. All rights reserved.</p>
+          <p>Engineered with HTML5, CSS3, & Vanilla JavaScript.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================================================
+         12. BACK-TO-TOP BUTTON
+         ======================================================================== -->
+    <button
+      type="button"
+      class="btn-back-to-top"
+      id="back-to-top"
+      aria-label="Back to top of page"
+      title="Back to top"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- ========================================================================
+         13. REUSABLE MODAL DIALOG (Project Details, Certificate Verification, Resume)
+         ======================================================================== -->
+    <div
+      class="modal-overlay"
+      id="details-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modal-title">Project Details</h3>
+          <button
+            type="button"
+            class="modal-close-btn"
+            id="modal-close-btn"
+            aria-label="Close modal dialog"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Populated dynamically via script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Toast Notification -->
+    <div
+      class="toast-notification"
+      id="contact-toast"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="toast-icon">✓</div>
+      <div>
+        <div class="toast-text-title">Message Sent Successfully!</div>
+        <div class="toast-text-desc">Thank you for reaching out. I will respond to your email shortly.</div>
+      </div>
+    </div>
+
+    <!-- Main JavaScript Logic (Pure Vanilla JS) -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

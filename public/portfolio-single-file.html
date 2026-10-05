@@ -1,0 +1,4520 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maahera Noushin K M | AI & Data Science Portfolio</title>
+    <meta
+      name="description"
+      content="Official portfolio of Maahera Noushin K M - AI & Data Science Student, Aspiring AI Engineer specializing in Machine Learning, Computer Vision, and Intelligent Systems."
+    />
+    <meta property="og:title" content="Maahera Noushin K M | AI & Data Science Portfolio" />
+    <meta
+      property="og:description"
+      content="Official portfolio of Maahera Noushin K M - AI & Data Science Student, Aspiring AI Engineer specializing in Machine Learning, Computer Vision, and Intelligent Systems."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Plus Jakarta Sans (Body), Outfit (Headings), JetBrains Mono (Data & Code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Stylesheet -->
+    <style>
+/* ==========================================================================
+   PORTFOLIO STYLESHEET - MAAHERA NOUSHIN K M
+   AI & Data Science Student | Aspiring AI Engineer
+   Clean Vanilla CSS3 with Modern Variables, Themes & Responsive Layout
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Variables & Theme Setup
+   -------------------------------------------------------------------------- */
+:root {
+  /* Dark Theme (Default) */
+  --bg-primary: #07090e;
+  --bg-secondary: #0d121d;
+  --bg-card: rgba(18, 24, 38, 0.75);
+  --bg-card-hover: rgba(26, 36, 56, 0.9);
+  --bg-input: rgba(15, 23, 42, 0.6);
+  --bg-glass: rgba(13, 18, 29, 0.85);
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+
+  --accent-primary: #38bdf8;       /* Tech cyan/electric blue */
+  --accent-secondary: #6366f1;     /* Indigo/AI purple */
+  --accent-emerald: #10b981;       /* Success / Active */
+  --accent-amber: #f59e0b;         /* Highlights */
+  
+  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+  --accent-gradient-subtle: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.12) 100%);
+  --border-glow: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(99, 102, 241, 0.4));
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.1);
+  --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.25);
+
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --nav-height: 76px;
+  --max-width: 1240px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Theme Mode */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: #ffffff;
+  --bg-input: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #0f172a;
+
+  --accent-primary: #0284c7;
+  --accent-secondary: #4f46e5;
+  --accent-emerald: #059669;
+
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+  --accent-gradient-subtle: linear-gradient(135deg, rgba(2, 132, 199, 0.08) 0%, rgba(79, 70, 229, 0.08) 100%);
+
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.16);
+  --shadow-subtle: 0 4px 20px rgba(15, 23, 42, 0.06);
+  --shadow-elevated: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+  --shadow-glow: 0 0 20px rgba(2, 132, 199, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Global Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
+  font-size: 16px;
+  overflow-x: hidden;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 60px;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 12px;
+}
+
+.section-kicker::before,
+.section-kicker::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 1.5px;
+  background-color: var(--accent-primary);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   3. Navigation Bar (Top Bar Contract)
+   -------------------------------------------------------------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: 1000;
+  transition: all var(--transition-smooth);
+  background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-subtle);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Brand Wordmark */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.brand-dot {
+  color: var(--accent-primary);
+}
+
+.brand-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: var(--accent-gradient-subtle);
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  letter-spacing: 0.05em;
+  margin-left: 4px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 6px 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link.active {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+}
+
+/* Nav Actions (Zone 3) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.theme-icon-sun {
+  display: none;
+}
+[data-theme="light"] .theme-icon-sun {
+  display: block;
+}
+[data-theme="light"] .theme-icon-moon {
+  display: none;
+}
+
+/* Resume CTA Button */
+.btn-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  background: var(--accent-gradient);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+  color: #ffffff;
+}
+
+/* Mobile Hamburger Toggle */
+.mobile-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: transform var(--transition-smooth), opacity var(--transition-fast);
+}
+
+.mobile-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Navigation Drawer */
+@media (max-width: 992px) {
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-elevated);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 32px 32px;
+    gap: 18px;
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-smooth), opacity var(--transition-smooth);
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .btn-nav-cta {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero Section
+   -------------------------------------------------------------------------- */
+.hero-section {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + 40px);
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Interactive Neural Mesh Canvas */
+#hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 1;
+  opacity: 0.65;
+}
+
+[data-theme="light"] #hero-canvas {
+  opacity: 0.35;
+}
+
+.hero-glow-bg {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(99, 102, 241, 0.08) 50%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 48px;
+  }
+}
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .hero-content {
+    align-items: center;
+  }
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--accent-gradient-subtle);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 22px;
+}
+
+.hero-eyebrow-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-emerald);
+  box-shadow: 0 0 10px var(--accent-emerald);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.hero-name {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, var(--text-light) 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .hero-name {
+  background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-role-wrapper {
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 2em;
+}
+
+.typing-text {
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+.typing-cursor {
+  display: inline-block;
+  color: var(--accent-primary);
+  font-weight: 300;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin-bottom: 34px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Button Variants */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.28);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.4);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+  color: var(--accent-primary);
+}
+
+/* Hero Visual / Avatar Card */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-card-wrapper {
+  position: relative;
+  width: 340px;
+  max-width: 100%;
+}
+
+.hero-avatar-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-elevated);
+  overflow: hidden;
+  transition: transform var(--transition-smooth);
+}
+
+.hero-avatar-frame:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-primary);
+}
+
+.hero-avatar-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: calc(var(--radius-lg) - 6px);
+}
+
+/* Floating Badges */
+.floating-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-elevated);
+  z-index: 3;
+  animation: float-chip 4s ease-in-out infinite alternate;
+}
+
+.chip-top-right {
+  top: -16px;
+  right: -20px;
+}
+
+.chip-bottom-left {
+  bottom: -16px;
+  left: -20px;
+  animation-delay: -2s;
+}
+
+@keyframes float-chip {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
+}
+
+.chip-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-gradient-subtle);
+  color: var(--accent-primary);
+  font-size: 1rem;
+}
+
+.chip-text-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.chip-text-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Scroll Down Prompt */
+.scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 2;
+  transition: color var(--transition-fast);
+}
+
+.scroll-indicator:hover {
+  color: var(--accent-primary);
+}
+
+.mouse-icon {
+  width: 20px;
+  height: 32px;
+  border: 2px solid currentColor;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.mouse-wheel {
+  width: 3px;
+  height: 6px;
+  background-color: currentColor;
+  border-radius: 2px;
+  animation: scroll-wheel 1.6s infinite;
+}
+
+@keyframes scroll-wheel {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(10px); opacity: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   5. About Me Section
+   -------------------------------------------------------------------------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.about-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+
+@media (max-width: 580px) {
+  .about-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.highlight-item {
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: all var(--transition-fast);
+}
+
+.highlight-item:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.highlight-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-gradient-subtle);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.highlight-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-primary);
+  margin-bottom: 2px;
+}
+
+.highlight-text {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Statistics Side Card */
+.about-stats-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.stats-card-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 20px;
+}
+
+.stats-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.stats-card-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.stats-numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.stats-footer-note {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   6. Skills Section
+   -------------------------------------------------------------------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.skill-category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  backdrop-filter: blur(14px);
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-elevated);
+}
+
+.skill-category-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.skill-cat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--accent-gradient-subtle);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.skill-cat-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.skill-cat-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.skill-name {
+  color: var(--text-primary);
+}
+
+.skill-percent {
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.skill-track {
+  width: 100%;
+  height: 7px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: var(--radius-full);
+  width: 0%;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   7. Projects Showcase Section
+   -------------------------------------------------------------------------- */
+.projects-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.filter-btn.active {
+  color: #ffffff;
+  background: var(--accent-gradient);
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-elevated);
+}
+
+.project-card.hidden {
+  display: none;
+}
+
+.project-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-category-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-primary);
+}
+
+.project-content {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Zero-Pill Tech Stack (Typographic Metadata) */
+.project-tech-stack {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.project-tech-stack span.separator {
+  opacity: 0.4;
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.btn-card-action:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-card-action.primary {
+  background: var(--accent-gradient-subtle);
+  color: var(--accent-primary);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.btn-card-action.primary:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   8. Education Section (Vertical Timeline)
+   -------------------------------------------------------------------------- */
+.timeline {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  opacity: 0.4;
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 24px;
+  left: 17px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .timeline-dot {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-card {
+  position: relative;
+  margin-left: 60px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  backdrop-filter: blur(14px);
+  transition: all var(--transition-smooth);
+}
+
+.timeline-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-elevated);
+}
+
+@media (min-width: 768px) {
+  .timeline-item.left .timeline-card {
+    margin-left: 0;
+    margin-right: calc(50% + 36px);
+  }
+
+  .timeline-item.right .timeline-card {
+    margin-left: calc(50% + 36px);
+  }
+}
+
+.timeline-year {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+}
+
+.timeline-degree {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.timeline-institution {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.timeline-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 14px;
+}
+
+.timeline-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.timeline-detail-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 140px;
+}
+
+.timeline-detail-val {
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   9. Certifications Section
+   -------------------------------------------------------------------------- */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.cert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.cert-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.cert-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--accent-gradient-subtle);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.cert-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-emerald);
+}
+
+.cert-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-emerald);
+}
+
+.cert-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.cert-org {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.cert-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-bottom: 20px;
+}
+
+.cert-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cert-id {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.btn-view-cert {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  transition: color var(--transition-fast);
+}
+
+.btn-view-cert:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   10. Achievements Section
+   -------------------------------------------------------------------------- */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.achievement-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: all var(--transition-smooth);
+}
+
+.achievement-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.achievement-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  background: var(--accent-gradient-subtle);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.achievement-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.achievement-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.achievement-meta {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--accent-primary);
+}
+
+/* --------------------------------------------------------------------------
+   11. Resume Section
+   -------------------------------------------------------------------------- */
+.resume-banner {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 60px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-elevated);
+}
+
+.resume-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.resume-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.resume-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 auto 34px;
+  line-height: 1.65;
+}
+
+.resume-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   12. Contact Section
+   -------------------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Info Column */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-card-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.contact-card-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-channel-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.contact-channel-item:hover {
+  border-color: var(--accent-primary);
+  transform: translateX(4px);
+}
+
+.channel-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-gradient-subtle);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.channel-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.channel-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-subtle);
+}
+
+@media (max-width: 580px) {
+  .contact-form-wrapper {
+    padding: 24px;
+  }
+}
+
+.form-grid-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .form-grid-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+  background: var(--bg-card-hover);
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: #ef4444;
+}
+
+.form-error-msg {
+  font-size: 0.78rem;
+  color: #ef4444;
+  margin-top: 4px;
+  display: none;
+}
+
+.form-error-msg.visible {
+  display: block;
+}
+
+.form-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.btn-submit-form {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.28);
+  transition: all var(--transition-fast);
+}
+
+.btn-submit-form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+}
+
+.btn-submit-form:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Toast Message */
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--accent-emerald);
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-elevated);
+  z-index: 2000;
+  transform: translateY(100px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-smooth);
+}
+
+.toast-notification.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toast-icon {
+  color: var(--accent-emerald);
+  font-size: 1.3rem;
+}
+
+.toast-text-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.toast-text-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   13. Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  padding: 60px 0 30px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer-brand-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 420px;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  transition: all var(--transition-fast);
+}
+
+.social-icon-btn:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 28px;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   14. Back-to-Top Button
+   -------------------------------------------------------------------------- */
+.btn-back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-elevated);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition: all var(--transition-smooth);
+}
+
+.btn-back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.btn-back-to-top:hover {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   15. Modals System (Details, Certificates, Resume)
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(12px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-smooth);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  transform: scale(0.94);
+  transition: transform var(--transition-smooth);
+  position: relative;
+}
+
+.modal-overlay.open .modal-container {
+  transform: scale(1);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  background: var(--bg-secondary);
+  z-index: 5;
+}
+
+.modal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.modal-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.modal-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   16. Scroll Reveal Classes
+   -------------------------------------------------------------------------- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessible reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <!-- ========================================================================
+         1. STICKY NAVIGATION BAR (Top Bar Contract: Brand - Links - Actions)
+         ======================================================================== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <!-- Zone 1: Single text element wordmark with AI dot -->
+        <a href="#home" class="nav-brand" aria-label="Maahera Noushin Home">
+          <span>Maahera Noushin</span>
+          <span class="brand-dot">.</span>
+          <span class="brand-badge">AI/DS</span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#certifications" class="nav-link">Certifications</a>
+          <a href="#achievements" class="nav-link">Achievements</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Zone 3: Actions & Controls -->
+        <div class="nav-actions">
+          <!-- Light / Dark Mode Toggle -->
+          <button
+            type="button"
+            class="theme-toggle-btn"
+            id="theme-toggle-btn"
+            aria-label="Toggle theme appearance"
+            title="Toggle theme appearance"
+          >
+            <!-- Moon Icon (for Dark Mode) -->
+            <svg
+              class="theme-icon-moon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <!-- Sun Icon (for Light Mode) -->
+            <svg
+              class="theme-icon-sun"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </button>
+
+          <!-- Quick Contact CTA -->
+          <a href="#contact" class="btn-nav-cta">
+            <span>Get in Touch</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button
+            type="button"
+            class="mobile-toggle"
+            id="mobile-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ========================================================================
+           2. HERO SECTION
+           ======================================================================== -->
+      <section class="hero-section" id="home">
+        <!-- Interactive Neural Synapse Particle Canvas -->
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+        <!-- Ambient Backdrop Light Glow -->
+        <div class="hero-glow-bg" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <!-- Hero Text Content -->
+          <div class="hero-content reveal-on-scroll">
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-pulse" aria-hidden="true"></span>
+              <span>Available for Internships & AI Projects</span>
+            </div>
+
+            <h1 class="hero-name">MAAHERA NOUSHIN K M</h1>
+
+            <div class="hero-role-wrapper">
+              <span class="typing-text" id="typing-text">AI & Data Science Student</span>
+              <span class="typing-cursor" aria-hidden="true">|</span>
+            </div>
+
+            <p class="hero-description">
+              I am passionate about Artificial Intelligence, Data Science, Machine Learning, and
+              building intelligent solutions to real-world problems.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn-primary">
+                <span>View My Projects</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </a>
+
+              <a href="#contact" class="btn-secondary">
+                <span>Contact Me</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Avatar Card & Floating Elements -->
+          <div class="hero-visual reveal-on-scroll">
+            <div class="hero-card-wrapper">
+              <!-- Floating Pill 1 (Top Right) -->
+              <div class="floating-chip chip-top-right">
+                <div class="chip-icon">🤖</div>
+                <div>
+                  <div class="chip-text-title">B.Tech AI & DS</div>
+                  <div class="chip-text-sub">Specialized Scholar</div>
+                </div>
+              </div>
+
+              <!-- Profile Image Container -->
+              <div class="hero-avatar-frame">
+                <img
+                  src="./assets/images/profile.jpg"
+                  alt="Portrait of Maahera Noushin K M, AI & Data Science Student"
+                  class="hero-avatar-img"
+                  loading="eager"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+
+              <!-- Floating Pill 2 (Bottom Left) -->
+              <div class="floating-chip chip-bottom-left">
+                <div class="chip-icon">⚡</div>
+                <div>
+                  <div class="chip-text-title">Machine Learning</div>
+                  <div class="chip-text-sub">Model Optimization</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Down Prompt -->
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+          <div class="mouse-icon">
+            <div class="mouse-wheel"></div>
+          </div>
+          <span>Scroll Down</span>
+        </a>
+      </section>
+
+      <!-- ========================================================================
+           3. ABOUT ME SECTION
+           ======================================================================== -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Professional Profile</div>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+              Driven by curiosity, fueled by data, and focused on designing intelligent systems with measurable real-world utility.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <!-- Narrative Column -->
+            <div class="about-narrative reveal-on-scroll">
+              <p class="about-paragraph">
+                Hello! I am <strong>Maahera Noushin K M</strong>, an Artificial Intelligence and Data Science undergraduate dedicated to turning mathematical formulations and raw datasets into high-performance, intelligent computational models.
+              </p>
+
+              <p class="about-paragraph">
+                My academic journey is anchored in core computer science foundations, statistical inference, heuristic algorithms, and modern deep learning frameworks. I thrive at the crossroads where theory meets hands-on implementation—whether designing autonomous drone pathfinding engines or developing media forensic classifiers.
+              </p>
+
+              <!-- Editorial Key Aspects Grid -->
+              <div class="about-highlights-grid">
+                <div class="highlight-item">
+                  <div class="highlight-icon">🎓</div>
+                  <div>
+                    <div class="highlight-label">Academic Background</div>
+                    <div class="highlight-text">B.Tech in AI & Data Science (2023 - 2027)</div>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">🔬</div>
+                  <div>
+                    <div class="highlight-label">Core Interests</div>
+                    <div class="highlight-text">Computer Vision, Deep Learning, Search Algorithms</div>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">🚀</div>
+                  <div>
+                    <div class="highlight-label">Currently Learning</div>
+                    <div class="highlight-text">Edge AI Inference, PyTorch Transformers, LLM fine-tuning</div>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">🎯</div>
+                  <div>
+                    <div class="highlight-label">Career Goal</div>
+                    <div class="highlight-text">AI Engineer / ML Specialist in high-impact tech & R&D</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile & Statistics Card -->
+            <div class="about-stats-card reveal-on-scroll">
+              <div class="stats-card-header">
+                <h3 class="stats-card-title">Key Milestones</h3>
+                <p class="stats-card-subtitle">Verified academic & technical progress</p>
+              </div>
+
+              <div class="stats-numbers-grid">
+                <div class="stat-box">
+                  <div class="stat-value" data-counter="12" data-suffix="+">12+</div>
+                  <div class="stat-label">Projects Completed</div>
+                </div>
+
+                <div class="stat-box">
+                  <div class="stat-value" data-counter="8" data-suffix="+">8+</div>
+                  <div class="stat-label">Certifications</div>
+                </div>
+
+                <div class="stat-box">
+                  <div class="stat-value" data-counter="15" data-suffix="+">15+</div>
+                  <div class="stat-label">Technologies Learned</div>
+                </div>
+
+                <div class="stat-box">
+                  <div class="stat-value" data-counter="100" data-suffix="%">100%</div>
+                  <div class="stat-label">Commitment to AI</div>
+                </div>
+              </div>
+
+              <div class="stats-footer-note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                <span>Specialization: Artificial Intelligence & Data Science</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           4. SKILLS SECTION
+           ======================================================================== -->
+      <section class="section" id="skills" style="background-color: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Technical Competencies</div>
+            <h2 class="section-title">Skills & Capabilities</h2>
+            <p class="section-subtitle">
+              A balanced blend of programming languages, machine learning frameworks, data analytics pipelines, and developer tooling.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- 1. Programming -->
+            <div class="skill-category-card reveal-on-scroll">
+              <div class="skill-category-header">
+                <div class="skill-cat-icon">💻</div>
+                <div>
+                  <h3 class="skill-cat-title">Programming</h3>
+                  <p class="skill-cat-desc">Core languages & algorithms</p>
+                </div>
+              </div>
+
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="90"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Java</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="80"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">C</span>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="75"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-percent">82%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="82"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. AI & Data Science -->
+            <div class="skill-category-card reveal-on-scroll">
+              <div class="skill-category-header">
+                <div class="skill-cat-icon">🧠</div>
+                <div>
+                  <h3 class="skill-cat-title">AI & Data Science</h3>
+                  <p class="skill-cat-desc">Intelligent systems & modeling</p>
+                </div>
+              </div>
+
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Artificial Intelligence</span>
+                    <span class="skill-percent">88%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="88"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Machine Learning</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="85"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Data Science & Analysis</span>
+                    <span class="skill-percent">84%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="84"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Statistics & Probability</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="80"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Search Algorithms (A*, etc.)</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="85"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Web Development -->
+            <div class="skill-category-card reveal-on-scroll">
+              <div class="skill-category-header">
+                <div class="skill-cat-icon">🌐</div>
+                <div>
+                  <h3 class="skill-cat-title">Web Development</h3>
+                  <p class="skill-cat-desc">Modern user interfaces</p>
+                </div>
+              </div>
+
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">HTML5</span>
+                    <span class="skill-percent">92%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="92"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">CSS3 (Responsive & Grid)</span>
+                    <span class="skill-percent">88%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="88"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Vanilla JavaScript (ES6+)</span>
+                    <span class="skill-percent">82%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="82"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">UI / UX & Accessibility</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="80"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Tools & Frameworks -->
+            <div class="skill-category-card reveal-on-scroll">
+              <div class="skill-category-header">
+                <div class="skill-cat-icon">⚙️</div>
+                <div>
+                  <h3 class="skill-cat-title">Tools & Platforms</h3>
+                  <p class="skill-cat-desc">Scientific computing & versioning</p>
+                </div>
+              </div>
+
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">MATLAB</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="80"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Google Colab</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="90"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Jupyter Notebook</span>
+                    <span class="skill-percent">92%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="92"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Git & GitHub</span>
+                    <span class="skill-percent">86%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar-fill" data-percent="86"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           5. PROJECTS SHOWCASE SECTION
+           ======================================================================== -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Engineered Solutions</div>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">
+              Applied artificial intelligence, computer vision pipelines, and data analytics systems solving tangible technical challenges.
+            </p>
+          </div>
+
+          <!-- Functional Category Filter Buttons -->
+          <div class="projects-filter-bar reveal-on-scroll" role="tablist" aria-label="Project Categories">
+            <button type="button" class="filter-btn active" data-filter="all">All Projects</button>
+            <button type="button" class="filter-btn" data-filter="ai">AI</button>
+            <button type="button" class="filter-btn" data-filter="datascience">Data Science</button>
+            <button type="button" class="filter-btn" data-filter="web">Web Development</button>
+          </div>
+
+          <!-- Project Cards Grid -->
+          <div class="projects-grid">
+            <!-- Project 0: MediShield AI (Featured Live Deployment) -->
+            <article class="project-card reveal-on-scroll" data-category="ai">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-medishield.jpg"
+                  alt="MediShield AI Healthcare Platform Interface"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border-color: rgba(16, 185, 129, 0.4);">
+                  ● Live Deployment
+                </span>
+              </div>
+
+              <div class="project-content">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                  <h3 class="project-title" style="margin-bottom: 0;">MediShield AI</h3>
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #10b981; font-weight: 600;">Production</span>
+                </div>
+                <p class="project-description">
+                  An intelligent healthcare platform engineered to protect sensitive medical telemetry, provide automated clinical anomaly triage, and secure electronic health records against manipulation and fraud.
+                </p>
+
+                <!-- Zero-Pill Typographic Tech Stack -->
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Machine Learning</span>
+                  <span class="separator">·</span>
+                  <span>Healthcare AI</span>
+                  <span class="separator">·</span>
+                  <span>Anomaly Detection</span>
+                  <span class="separator">·</span>
+                  <span>Predictive Triage</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://medishield-ai.ai.studio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action primary"
+                    style="font-weight: 700;"
+                  >
+                    <span>Live App</span> ↗
+                  </a>
+                  <button type="button" class="btn-card-action" data-project-key="medishield">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 1: AI Search & Rescue Drone -->
+            <article class="project-card reveal-on-scroll" data-category="ai">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-drone.jpg"
+                  alt="AI Search & Rescue Drone Pathfinding Visualization"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag">Artificial Intelligence</span>
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">AI Search & Rescue Drone</h3>
+                <p class="project-description">
+                  An AI-based search and rescue drone system that uses intelligent pathfinding to identify safe and efficient routes in disaster environments while avoiding obstacles.
+                </p>
+
+                <!-- Zero-Pill Typographic Tech Stack -->
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Artificial Intelligence</span>
+                  <span class="separator">·</span>
+                  <span>A* Search Algorithm</span>
+                  <span class="separator">·</span>
+                  <span>Pathfinding</span>
+                </div>
+
+                <div class="project-actions">
+                  <button type="button" class="btn-card-action primary" data-project-key="drone">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#contact" class="btn-card-action">
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Deepfake Predictor -->
+            <article class="project-card reveal-on-scroll" data-category="ai">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-deepfake.jpg"
+                  alt="Deepfake Machine Learning Predictor Analysis Interface"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag">Machine Learning</span>
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Deepfake Predictor</h3>
+                <p class="project-description">
+                  A machine learning based system designed to identify manipulated or synthetic media using data-driven techniques and convolutional feature classification.
+                </p>
+
+                <!-- Zero-Pill Typographic Tech Stack -->
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Machine Learning</span>
+                  <span class="separator">·</span>
+                  <span>Data Science</span>
+                  <span class="separator">·</span>
+                  <span>Deepfake Detection</span>
+                </div>
+
+                <div class="project-actions">
+                  <button type="button" class="btn-card-action primary" data-project-key="deepfake">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#contact" class="btn-card-action">
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: Future Project Placeholder (Autonomous Edge Vision) -->
+            <article class="project-card reveal-on-scroll" data-category="ai">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-edge-vision.jpg"
+                  alt="Autonomous Edge Vision Hardware Module"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag">Edge AI / Future</span>
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Autonomous Edge Vision System</h3>
+                <p class="project-description">
+                  An upcoming edge AI system designed for real-time visual inspection, edge anomaly classification, and embedded inference on low-power IoT microcontrollers.
+                </p>
+
+                <!-- Zero-Pill Typographic Tech Stack -->
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Embedded AI</span>
+                  <span class="separator">·</span>
+                  <span>Computer Vision</span>
+                  <span class="separator">·</span>
+                  <span>IoT</span>
+                </div>
+
+                <div class="project-actions">
+                  <button type="button" class="btn-card-action primary" data-project-key="edge">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#contact" class="btn-card-action">
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4: Predictive Healthcare Analytics (Data Science) -->
+            <article class="project-card reveal-on-scroll" data-category="datascience">
+              <div class="project-media">
+                <img
+                  src="./assets/images/project-deepfake.jpg"
+                  alt="Predictive Healthcare Analytics Diagnostic Dashboard"
+                  class="project-image"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+                <span class="project-category-tag">Data Science</span>
+              </div>
+
+              <div class="project-content">
+                <h3 class="project-title">Predictive Healthcare Analytics</h3>
+                <p class="project-description">
+                  A multi-parameter clinical risk analysis pipeline forecasting cardiovascular anomalies from patient telemetry and longitudinal lab reports.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span class="separator">·</span>
+                  <span>Pandas</span>
+                  <span class="separator">·</span>
+                  <span>Scikit-Learn</span>
+                  <span class="separator">·</span>
+                  <span>Clinical Analytics</span>
+                </div>
+
+                <div class="project-actions">
+                  <button type="button" class="btn-card-action primary" data-project-key="healthcare">
+                    <span>View Details</span>
+                  </button>
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-card-action"
+                  >
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#contact" class="btn-card-action">
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           6. EDUCATION SECTION (Vertical Modern Timeline)
+           ======================================================================== -->
+      <section class="section" id="education" style="background-color: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Academic Roadmap</div>
+            <h2 class="section-title">Education & Milestones</h2>
+            <p class="section-subtitle">
+              Formal engineering foundation in Artificial Intelligence, computational mathematics, and software systems.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <!-- Timeline Item 1 (Undergraduate) -->
+            <div class="timeline-item left reveal-on-scroll">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <span class="timeline-year">2023 — 2027 (Current)</span>
+                <h3 class="timeline-degree">B.Tech in Artificial Intelligence & Data Science</h3>
+                <div class="timeline-institution">College / University Name [Editable Placeholder]</div>
+
+                <div class="timeline-details">
+                  <div class="timeline-detail-row">
+                    <span class="timeline-detail-label">Relevant Subjects:</span>
+                    <span class="timeline-detail-val">
+                      Data Structures & Algorithms, Deep Learning, Probability & Statistics, Database Management Systems, Neural Networks, Computer Vision
+                    </span>
+                  </div>
+                  <div class="timeline-detail-row">
+                    <span class="timeline-detail-label">Key Highlights:</span>
+                    <span class="timeline-detail-val">
+                      Dean's Honor List, Top 5% in Department, Active Member of the AI & Robotics Research Society
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 (Higher Secondary) -->
+            <div class="timeline-item right reveal-on-scroll">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <span class="timeline-year">2021 — 2023</span>
+                <h3 class="timeline-degree">Higher Secondary Certificate (HSC / 12th Standard)</h3>
+                <div class="timeline-institution">Higher Secondary School [Editable Placeholder]</div>
+
+                <div class="timeline-details">
+                  <div class="timeline-detail-row">
+                    <span class="timeline-detail-label">Major Subjects:</span>
+                    <span class="timeline-detail-val">
+                      Mathematics, Physics, Chemistry, Computer Science
+                    </span>
+                  </div>
+                  <div class="timeline-detail-row">
+                    <span class="timeline-detail-label">Academic Achievement:</span>
+                    <span class="timeline-detail-val">
+                      Graduated with High Distinction (95%+ Aggregate), School Math Olympiad Rank Holder
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           7. CERTIFICATIONS SECTION
+           ======================================================================== -->
+      <section class="section" id="certifications">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Continuous Learning</div>
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">
+              Industry credentials and specialized course completions validating competencies in AI, Data Science, and Scientific Computing.
+            </p>
+          </div>
+
+          <div class="certifications-grid">
+            <!-- Cert 1: MATLAB -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">📐</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">MATLAB Fundamentals & Applied Computing</h3>
+              <div class="cert-org">MathWorks</div>
+              <div class="cert-date">Issued August 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">MW-77492-AI</span>
+                <button type="button" class="btn-view-cert" data-cert-key="matlab">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 2: AI Foundations -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">🤖</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Artificial Intelligence & Deep Learning</h3>
+              <div class="cert-org">DeepLearning.AI</div>
+              <div class="cert-date">Issued November 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">DL-88210-FD</span>
+                <button type="button" class="btn-view-cert" data-cert-key="ai">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 3: Python for Data Science -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">🐍</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Python for Data Science & ML</h3>
+              <div class="cert-org">Coursera / IBM</div>
+              <div class="cert-date">Issued May 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">PY-43901-DS</span>
+                <button type="button" class="btn-view-cert" data-cert-key="python">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 4: Data Science Professional -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">📊</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Data Science Professional Certificate</h3>
+              <div class="cert-org">IBM</div>
+              <div class="cert-date">Issued January 2026</div>
+              <div class="cert-footer">
+                <span class="cert-id">IBM-90112-PC</span>
+                <button type="button" class="btn-view-cert" data-cert-key="datascience">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 5: Machine Learning -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">📈</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Supervised Machine Learning</h3>
+              <div class="cert-org">Stanford Online / Coursera</div>
+              <div class="cert-date">Issued July 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">ST-10398-ML</span>
+                <button type="button" class="btn-view-cert" data-cert-key="ml">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+
+            <!-- Cert 6: Modern Web Development -->
+            <div class="cert-card reveal-on-scroll">
+              <div class="cert-header">
+                <div class="cert-icon-wrapper">🌐</div>
+                <div class="cert-status">
+                  <span class="cert-status-dot"></span>
+                  <span>Verified</span>
+                </div>
+              </div>
+              <h3 class="cert-name">Modern Responsive Web Development</h3>
+              <div class="cert-org">freeCodeCamp</div>
+              <div class="cert-date">Issued March 2025</div>
+              <div class="cert-footer">
+                <span class="cert-id">FCC-88301-WD</span>
+                <button type="button" class="btn-view-cert" data-cert-key="web">
+                  <span>View Certificate</span> →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           8. ACHIEVEMENTS SECTION
+           ======================================================================== -->
+      <section class="section" id="achievements" style="background-color: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Distinctions & Honors</div>
+            <h2 class="section-title">Achievements</h2>
+            <p class="section-subtitle">
+              Recognition received in hackathons, academic challenges, technical presentations, and project competitions.
+            </p>
+          </div>
+
+          <div class="achievements-grid">
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">🏆</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">1st Place — Smart Campus Hackathon</h3>
+                <p class="achievement-desc">
+                  Led a 4-person team developing an automated resource allocation engine optimizing laboratory electricity consumption with AI sensor feeds.
+                </p>
+                <div class="achievement-meta">State Level · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">🎖️</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Top 10 Finalist — AI Innovation Challenge</h3>
+                <p class="achievement-desc">
+                  Selected among 350+ student teams across the nation for the AI Search & Rescue Drone disaster relief prototype.
+                </p>
+                <div class="achievement-meta">National Competition · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">🎤</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Technical Presentation on Heuristic Search</h3>
+                <p class="achievement-desc">
+                  Presented a technical paper analyzing modified A* heuristic weighting mechanisms for dynamic 3D obstacle avoidance at the National Student Symposium.
+                </p>
+                <div class="achievement-meta">Technical Symposium · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">💡</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Student Workshop Lead: Python for ML</h3>
+                <p class="achievement-desc">
+                  Organized and instructed a 3-day practical hands-on workshop introducing 80+ junior engineering students to Python, NumPy, and Scikit-Learn.
+                </p>
+                <div class="achievement-meta">Campus Peer Mentor · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">💻</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">100+ Days of Code Milestone</h3>
+                <p class="achievement-desc">
+                  Maintained continuous problem-solving consistency across Data Structures, Algorithms, and Machine Learning repositories on GitHub.
+                </p>
+                <div class="achievement-meta">GitHub Coding Consistency · 2025</div>
+              </div>
+            </div>
+
+            <div class="achievement-card reveal-on-scroll">
+              <div class="achievement-icon-box">⭐</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Academic Merit Scholarship</h3>
+                <p class="achievement-desc">
+                  Awarded the Department Academic Excellence Scholarship for ranking in the upper 5th percentile of the AI & Data Science cohort.
+                </p>
+                <div class="achievement-meta">Academic Year 2024 — 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           9. RESUME SECTION
+           ======================================================================== -->
+      <section class="section" id="resume">
+        <div class="container">
+          <div class="resume-banner reveal-on-scroll">
+            <div class="resume-glow" aria-hidden="true"></div>
+
+            <h2 class="resume-title">Let's build something intelligent together.</h2>
+            <p class="resume-text">
+              I am currently seeking opportunities for internships, technical apprenticeships, and collaborative AI/Data Science projects. Download or preview my complete curriculum vitae below.
+            </p>
+
+            <div class="resume-actions">
+              <a
+                href="#"
+                download="Maahera_Noushin_Resume.pdf"
+                class="btn-primary"
+                id="btn-download-resume"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" x2="12" y1="15" y2="3"></line>
+                </svg>
+                <span>Download Resume</span>
+              </a>
+
+              <button type="button" class="btn-secondary" id="btn-view-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span>View Resume</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           10. CONTACT SECTION
+           ======================================================================== -->
+      <section class="section" id="contact" style="background-color: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-header reveal-on-scroll">
+            <div class="section-kicker">Get In Touch</div>
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">
+              Have an internship opening, research inquiry, project collaboration, or question? Send a note or reach out directly.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Contact Info Column -->
+            <div class="contact-info-col reveal-on-scroll">
+              <div class="contact-card-box">
+                <div>
+                  <h3 class="contact-card-title">Direct Inquiries</h3>
+                  <p class="contact-card-subtitle">
+                    Feel free to connect directly via email or professional profiles.
+                  </p>
+                </div>
+
+                <div class="contact-channels">
+                  <!-- Email -->
+                  <a href="mailto:maahera2007@gmail.com" class="contact-channel-item">
+                    <div class="channel-icon">✉️</div>
+                    <div>
+                      <div class="channel-label">Email Address</div>
+                      <div class="channel-val">maahera2007@gmail.com</div>
+                    </div>
+                  </a>
+
+                  <!-- GitHub -->
+                  <a
+                    href="https://github.com/maahera"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-channel-item"
+                  >
+                    <div class="channel-icon">💻</div>
+                    <div>
+                      <div class="channel-label">GitHub Profile</div>
+                      <div class="channel-val">github.com/maahera</div>
+                    </div>
+                  </a>
+
+                  <!-- LinkedIn -->
+                  <a
+                    href="https://linkedin.com/in/maahera-noushin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-channel-item"
+                  >
+                    <div class="channel-icon">🔗</div>
+                    <div>
+                      <div class="channel-label">LinkedIn Profile</div>
+                      <div class="channel-val">linkedin.com/in/maahera-noushin</div>
+                    </div>
+                  </a>
+
+                  <!-- Location -->
+                  <div class="contact-channel-item">
+                    <div class="channel-icon">📍</div>
+                    <div>
+                      <div class="channel-label">Current Location</div>
+                      <div class="channel-val">Tamil Nadu, India</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Functional Contact Form Column -->
+            <div class="contact-form-wrapper reveal-on-scroll">
+              <form id="contact-form" novalidate>
+                <div class="form-grid-row">
+                  <div class="form-group">
+                    <label for="contact-name" class="form-label">Full Name *</label>
+                    <input
+                      type="text"
+                      id="contact-name"
+                      class="form-input"
+                      placeholder="e.g. Sarah Jenkins"
+                      required
+                    />
+                    <div class="form-error-msg" aria-live="polite"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contact-email" class="form-label">Email Address *</label>
+                    <input
+                      type="email"
+                      id="contact-email"
+                      class="form-input"
+                      placeholder="e.g. sarah@company.com"
+                      required
+                    />
+                    <div class="form-error-msg" aria-live="polite"></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject" class="form-label">Subject *</label>
+                  <input
+                    type="text"
+                    id="contact-subject"
+                    class="form-input"
+                    placeholder="e.g. AI Internship Opportunity / Collaboration"
+                    required
+                  />
+                  <div class="form-error-msg" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Message *</label>
+                  <textarea
+                    id="contact-message"
+                    class="form-textarea"
+                    placeholder="Describe your project, team opportunity, or inquiry..."
+                    required
+                  ></textarea>
+                  <div class="form-error-msg" aria-live="polite"></div>
+                </div>
+
+                <button type="submit" class="btn-submit-form" id="contact-submit-btn">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" x2="11" y1="2" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================================================
+         11. FOOTER
+         ======================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand-wrap">
+            <div class="footer-brand">MAAHERA NOUSHIN K M</div>
+            <p class="footer-tagline">
+              AI & Data Science Student · Aspiring AI Engineer passionate about designing intelligent solutions to real-world challenges.
+            </p>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="footer-social-links" aria-label="Social profiles">
+            <a
+              href="mailto:maahera2007@gmail.com"
+              class="social-icon-btn"
+              title="Send an email"
+              aria-label="Email"
+            >
+              ✉️
+            </a>
+            <a
+              href="https://github.com/maahera"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon-btn"
+              title="GitHub Profile"
+              aria-label="GitHub"
+            >
+              💻
+            </a>
+            <a
+              href="https://linkedin.com/in/maahera-noushin"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon-btn"
+              title="LinkedIn Profile"
+              aria-label="LinkedIn"
+            >
+              🔗
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Maahera Noushin K M. All rights reserved.</p>
+          <p>Engineered with HTML5, CSS3, & Vanilla JavaScript.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================================================
+         12. BACK-TO-TOP BUTTON
+         ======================================================================== -->
+    <button
+      type="button"
+      class="btn-back-to-top"
+      id="back-to-top"
+      aria-label="Back to top of page"
+      title="Back to top"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- ========================================================================
+         13. REUSABLE MODAL DIALOG (Project Details, Certificate Verification, Resume)
+         ======================================================================== -->
+    <div
+      class="modal-overlay"
+      id="details-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modal-title">Project Details</h3>
+          <button
+            type="button"
+            class="modal-close-btn"
+            id="modal-close-btn"
+            aria-label="Close modal dialog"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Populated dynamically via script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Toast Notification -->
+    <div
+      class="toast-notification"
+      id="contact-toast"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="toast-icon">✓</div>
+      <div>
+        <div class="toast-text-title">Message Sent Successfully!</div>
+        <div class="toast-text-desc">Thank you for reaching out. I will respond to your email shortly.</div>
+      </div>
+    </div>
+
+    <!-- Main JavaScript Logic (Pure Vanilla JS) -->
+    <script>
+/**
+ * ==========================================================================
+ * PORTFOLIO JAVASCRIPT - MAAHERA NOUSHIN K M
+ * AI & Data Science Student | Aspiring AI Engineer
+ * Pure Vanilla JavaScript (ES6+) - Robust, Error-Free, Zero-Dependency
+ * ==========================================================================
+ */
+
+'use strict';
+
+// Safe execution whether DOM is already parsed or still loading
+function initApp() {
+  initHeroCanvas();
+  initTypingAnimation();
+  initNavigation();
+  initThemeToggle();
+  initScrollReveal();
+  initAnimatedCounters();
+  initSkillBars();
+  initProjectFiltering();
+  initModals();
+  initContactForm();
+  initBackToTop();
+  initResumeActions();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  // If already interactive/complete (e.g. deferred ES module)
+  initApp();
+}
+
+/* --------------------------------------------------------------------------
+   Global Toast Notification Utility (Non-blocking, safe inside iframes)
+   -------------------------------------------------------------------------- */
+function showToast(title, desc, duration = 4500) {
+  const toast = document.getElementById('contact-toast');
+  if (!toast) return;
+
+  const titleEl = toast.querySelector('.toast-text-title');
+  const descEl = toast.querySelector('.toast-text-desc');
+
+  if (titleEl) titleEl.textContent = title;
+  if (descEl) descEl.textContent = desc;
+
+  toast.classList.add('active');
+
+  // Clear any existing timer
+  if (toast.dataset.timeoutId) {
+    clearTimeout(parseInt(toast.dataset.timeoutId, 10));
+  }
+
+  const timeoutId = setTimeout(() => {
+    toast.classList.remove('active');
+  }, duration);
+
+  toast.dataset.timeoutId = String(timeoutId);
+}
+
+/* --------------------------------------------------------------------------
+   1. Interactive Neural Network / Mesh Canvas (Hero Background)
+   -------------------------------------------------------------------------- */
+function initHeroCanvas() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  let animationFrameId;
+  let isCanvasVisible = true;
+
+  // Track cursor position accurately relative to canvas bounds
+  const mouse = {
+    x: null,
+    y: null,
+    radius: 130,
+  };
+
+  window.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    if (
+      e.clientX >= rect.left &&
+      e.clientX <= rect.right &&
+      e.clientY >= rect.top &&
+      e.clientY <= rect.bottom
+    ) {
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    } else {
+      mouse.x = null;
+      mouse.y = null;
+    }
+  });
+
+  window.addEventListener('mouseout', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  // Handle window resizing safely
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      createNodes();
+    }, 150);
+  });
+
+  // Node class for Neural Synaptic Mesh
+  class Node {
+    constructor() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.vx = (Math.random() - 0.5) * 0.7;
+      this.vy = (Math.random() - 0.5) * 0.7;
+      this.radius = Math.random() * 1.8 + 1.2;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+
+      // Bounce at viewport edges
+      if (this.x < 0 || this.x > width) this.vx *= -1;
+      if (this.y < 0 || this.y > height) this.vy *= -1;
+
+      // Gentle mouse interaction
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius && dist > 0) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          this.x -= (dx / dist) * force * 2.5;
+          this.y -= (dy / dist) * force * 2.5;
+        }
+      }
+    }
+
+    draw(themeIsLight) {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = themeIsLight ? 'rgba(2, 132, 199, 0.7)' : 'rgba(56, 189, 248, 0.75)';
+      ctx.fill();
+    }
+  }
+
+  let nodes = [];
+  function createNodes() {
+    nodes = [];
+    const count = Math.floor((width * height) / 16000);
+    const total = Math.min(Math.max(count, 30), 80);
+    for (let i = 0; i < total; i++) {
+      nodes.push(new Node());
+    }
+  }
+
+  createNodes();
+
+  // Animation Loop
+  function animate() {
+    if (!isCanvasVisible) {
+      animationFrameId = requestAnimationFrame(animate);
+      return;
+    }
+
+    ctx.clearRect(0, 0, width, height);
+    const themeIsLight = document.documentElement.getAttribute('data-theme') === 'light';
+
+    // Draw connecting synapses
+    const maxDist = 135;
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < maxDist) {
+          const alpha = (1 - dist / maxDist) * 0.26;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = themeIsLight
+            ? `rgba(79, 70, 229, ${alpha * 0.8})`
+            : `rgba(56, 189, 248, ${alpha})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Update and draw each node
+    for (let i = 0; i < nodes.length; i++) {
+      nodes[i].update();
+      nodes[i].draw(themeIsLight);
+    }
+
+    animationFrameId = requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // Pause canvas when hero is out of view to save battery and GPU
+  const heroSection = document.getElementById('home');
+  if (heroSection && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isCanvasVisible = entries[0].isIntersecting;
+      },
+      { threshold: 0.05 }
+    );
+    observer.observe(heroSection);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Dynamic Typing Animation
+   -------------------------------------------------------------------------- */
+function initTypingAnimation() {
+  const typingElement = document.getElementById('typing-text');
+  if (!typingElement) return;
+
+  const roles = [
+    'AI & Data Science Student',
+    'Aspiring AI Engineer',
+    'Creator of MediShield AI',
+    'Machine Learning Enthusiast',
+    'Deep Learning Explorer',
+    'Intelligent Systems Developer',
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+
+  function type() {
+    const currentRole = roles[roleIndex];
+
+    if (isDeleting) {
+      typingElement.textContent = currentRole.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 40;
+    } else {
+      typingElement.textContent = currentRole.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 90;
+    }
+
+    if (!isDeleting && charIndex === currentRole.length) {
+      typingSpeed = 1800; // Pause at end of text
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      typingSpeed = 350;
+    }
+
+    setTimeout(type, typingSpeed);
+  }
+
+  type();
+}
+
+/* --------------------------------------------------------------------------
+   3. Sticky Navigation, Scroll Spy & Mobile Menu
+   -------------------------------------------------------------------------- */
+function initNavigation() {
+  const navbar = document.getElementById('navbar');
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navLinks = document.getElementById('nav-links');
+  const navLinkItems = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+
+  // Sticky Navbar on Scroll
+  function checkNavScroll() {
+    if (window.scrollY > 40) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', checkNavScroll, { passive: true });
+  checkNavScroll();
+
+  // Mobile Menu Toggle
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      mobileToggle.classList.toggle('active', isOpen);
+      mobileToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinkItems.forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (
+        navLinks.classList.contains('open') &&
+        !navLinks.contains(e.target) &&
+        !mobileToggle.contains(e.target)
+      ) {
+        navLinks.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Active Section Indicator (Scroll Spy) using accurate bounding checks
+  function highlightActiveNav() {
+    const scrollPos = window.scrollY + 160;
+
+    sections.forEach((section) => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinkItems.forEach((link) => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightActiveNav, { passive: true });
+  highlightActiveNav();
+}
+
+/* --------------------------------------------------------------------------
+   4. Dark / Light Mode Switcher
+   -------------------------------------------------------------------------- */
+function initThemeToggle() {
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  if (!themeToggleBtn) return;
+
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+  if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'light') {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('portfolio-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('portfolio-theme', 'light');
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   5. Scroll Reveal Animations
+   -------------------------------------------------------------------------- */
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if (!revealElements.length) return;
+
+  // Immediately reveal elements that are already visible in viewport
+  function checkReveal() {
+    const windowBottom = window.scrollY + window.innerHeight;
+    revealElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const elementTop = rect.top + window.scrollY;
+      if (elementTop < windowBottom - 40) {
+        el.classList.add('revealed');
+      }
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
+    );
+
+    revealElements.forEach((el) => observer.observe(el));
+  } else {
+    window.addEventListener('scroll', checkReveal, { passive: true });
+  }
+
+  // Initial check
+  checkReveal();
+}
+
+/* --------------------------------------------------------------------------
+   6. Animated Counters for Statistics & Achievements
+   -------------------------------------------------------------------------- */
+function initAnimatedCounters() {
+  const counterElements = document.querySelectorAll('[data-counter]');
+  if (!counterElements.length) return;
+
+  const animateCounter = (el) => {
+    if (el.dataset.animated === 'true') return;
+    el.dataset.animated = 'true';
+
+    const target = parseInt(el.getAttribute('data-counter'), 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = 1500;
+    const startTime = performance.now();
+
+    function updateCount(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentVal = Math.floor(easeProgress * target);
+
+      el.textContent = currentVal + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
+      } else {
+        el.textContent = target + suffix;
+      }
+    }
+
+    requestAnimationFrame(updateCount);
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    counterElements.forEach((counter) => observer.observe(counter));
+  } else {
+    counterElements.forEach((counter) => animateCounter(counter));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Animated Skill Bars
+   -------------------------------------------------------------------------- */
+function initSkillBars() {
+  const skillBars = document.querySelectorAll('.skill-bar-fill');
+  if (!skillBars.length) return;
+
+  const triggerBar = (bar) => {
+    if (bar.dataset.animated === 'true') return;
+    bar.dataset.animated = 'true';
+    const percent = bar.getAttribute('data-percent') || '0';
+    bar.style.width = `${percent}%`;
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            triggerBar(entry.target);
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    skillBars.forEach((bar) => observer.observe(bar));
+  } else {
+    skillBars.forEach((bar) => triggerBar(bar));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Project Filtering (All | AI | Data Science | Web Development)
+   -------------------------------------------------------------------------- */
+function initProjectFiltering() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  if (!filterButtons.length || !projectCards.length) return;
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      projectCards.forEach((card) => {
+        const cardCategory = card.getAttribute('data-category');
+        const isMatch =
+          filterValue === 'all' ||
+          cardCategory === filterValue ||
+          (filterValue === 'ai' && (cardCategory === 'ai' || cardCategory === 'healthcare')) ||
+          (filterValue === 'datascience' && (cardCategory === 'datascience' || cardCategory === 'healthcare'));
+
+        if (isMatch) {
+          card.classList.remove('hidden');
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(12px)';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 30);
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   9. Modals System (Project Details, Certificate Verification, Resume View)
+   -------------------------------------------------------------------------- */
+const PROJECT_DATA = {
+  medishield: {
+    title: 'MediShield AI — Intelligent Healthcare Defense & Diagnostic Triage',
+    category: 'Healthcare AI & Cybersecurity',
+    image: './assets/images/project-medishield.jpg',
+    description:
+      'MediShield AI is an intelligent healthcare platform engineered to protect sensitive medical telemetry, provide automated clinical anomaly classification, and secure electronic health records against manipulation and fraud.',
+    technologies: ['Python', 'Machine Learning', 'Healthcare AI', 'Anomaly Detection', 'Predictive Triage', 'Cloud AI'],
+    features: [
+      'Live deployed production application hosted at https://medishield-ai.ai.studio/',
+      'Automated multi-parameter biomarker anomaly screening and risk stratification',
+      'Electronic medical record (EMR) cryptographic integrity checks preventing tampering',
+      'Interactive clinical visualization suite with responsive patient risk heatmaps',
+      'Optimized low-latency neural inference pipelines for real-time triage assistance',
+    ],
+    githubUrl: 'https://github.com/maahera',
+    demoUrl: 'https://medishield-ai.ai.studio/',
+  },
+  drone: {
+    title: 'AI Search & Rescue Drone',
+    category: 'Artificial Intelligence & Robotics',
+    image: './assets/images/project-drone.jpg',
+    description:
+      'An intelligent unmanned aerial vehicle (UAV) pathfinding engine built for disaster relief operations. The system computes dynamic, collision-free flight corridors across smoke-filled, earthquake-damaged terrains using an optimized A* search algorithm combined with heuristic obstacle cost fields.',
+    technologies: ['Python', 'A* Search Algorithm', 'Computer Vision', 'Pathfinding', 'Simulation'],
+    features: [
+      'Heuristic 3D terrain exploration with obstacle cost gradients',
+      'Dynamic re-routing upon detecting structural collapses',
+      'Low computational footprint designed for edge UAV microcontrollers',
+      'Tested across 20+ simulated disaster topologies with zero mission-critical collisions',
+    ],
+    githubUrl: 'https://github.com/maahera',
+    demoUrl: 'https://medishield-ai.ai.studio/',
+  },
+  deepfake: {
+    title: 'Deepfake Predictor',
+    category: 'Machine Learning & Media Forensics',
+    image: './assets/images/project-deepfake.jpg',
+    description:
+      'A machine learning pipeline engineered to distinguish authentic video and audio recordings from synthetically generated deepfakes. Analyzes micro-inconsistencies in biological facial blinking rates, lighting reflection continuity, and audio frequency anomalies.',
+    technologies: ['Python', 'PyTorch / Scikit-Learn', 'OpenCV', 'Feature Extraction', 'Data Science'],
+    features: [
+      'Spatial-temporal facial landmark tracking across video frames',
+      'Dual-stream architecture evaluating both visual and audio spectrograms',
+      'High detection accuracy on benchmark deepfake challenge datasets',
+      'Real-time confidence scoring with visual highlight heatmaps',
+    ],
+    githubUrl: 'https://github.com/maahera',
+    demoUrl: 'https://medishield-ai.ai.studio/',
+  },
+  edge: {
+    title: 'Autonomous Edge Vision System',
+    category: 'Edge AI & Embedded Computing',
+    image: './assets/images/project-edge-vision.jpg',
+    description:
+      'An ongoing research and engineering project implementing lightweight object detection and semantic anomaly localization directly on resource-constrained embedded processors.',
+    technologies: ['Python', 'Embedded AI', 'TensorFlow Lite', 'Edge Computing', 'IoT'],
+    features: [
+      'Model quantization reducing model footprint by 65%',
+      'Optimized integer inference pipelines running at 30+ FPS',
+      'Modular sensor integration for industrial automation inspection',
+      'Customizable threshold tuning for safety-critical edge alerts',
+    ],
+    githubUrl: 'https://github.com/maahera',
+    demoUrl: 'https://medishield-ai.ai.studio/',
+  },
+  healthcare: {
+    title: 'Predictive Healthcare Analytics',
+    category: 'Data Science & Predictive Modeling',
+    image: './assets/images/project-medishield.jpg',
+    description:
+      'A data-driven risk assessment dashboard analyzing longitudinal patient biomarkers to predict early cardiac risk indicators. Utilizes statistical imputation, outlier detection, and ensemble classifiers.',
+    technologies: ['Python', 'Pandas', 'Scikit-Learn', 'Data Visualization', 'Clinical Data'],
+    features: [
+      'Comprehensive exploratory data analysis and correlation heatmaps',
+      'Ensemble model achieving 89% sensitivity on validation splits',
+      'SHAP value feature explainability for medical transparency',
+      'Interactive risk stratification dashboard for clinicians',
+    ],
+    githubUrl: 'https://github.com/maahera',
+    demoUrl: 'https://medishield-ai.ai.studio/',
+  },
+};
+
+const CERTIFICATE_DATA = {
+  matlab: {
+    title: 'MATLAB Fundamentals & Applied Computing',
+    issuer: 'MathWorks',
+    date: 'August 2025',
+    id: 'MW-77492-AI',
+    description:
+      'Comprehensive certification covering numerical computation, data analysis, matrix algorithms, and scientific visualization using MATLAB.',
+  },
+  ai: {
+    title: 'Artificial Intelligence & Deep Learning Foundations',
+    issuer: 'DeepLearning.AI',
+    date: 'November 2025',
+    id: 'DL-88210-FD',
+    description:
+      'Specialized coursework on neural network architectures, backpropagation, convolutional layers, and loss optimization.',
+  },
+  python: {
+    title: 'Python for Data Science and Machine Learning',
+    issuer: 'Coursera / IBM',
+    date: 'May 2025',
+    id: 'PY-43901-DS',
+    description:
+      'Practical training on Python libraries including NumPy, Pandas, Matplotlib, and Scikit-Learn with hands-on capstone projects.',
+  },
+  datascience: {
+    title: 'Data Science Professional Certificate',
+    issuer: 'IBM',
+    date: 'January 2026',
+    id: 'IBM-90112-PC',
+    description:
+      'Rigorous series covering the full data science lifecycle: data preparation, relational databases, statistical hypothesis testing, and model deployment.',
+  },
+  ml: {
+    title: 'Supervised Machine Learning: Regression and Classification',
+    issuer: 'Stanford Online / DeepLearning.AI',
+    date: 'July 2025',
+    id: 'ST-10398-ML',
+    description:
+      'In-depth mastery of linear regression, logistic regression, gradient descent, regularizations, decision trees, and validation metrics.',
+  },
+  web: {
+    title: 'Modern Responsive Web Development',
+    issuer: 'freeCodeCamp',
+    date: 'March 2025',
+    id: 'FCC-88301-WD',
+    description:
+      'Hands-on validation of semantic HTML5, modern CSS3 layout systems (Flexbox, Grid, Custom Properties), and accessibility standards.',
+  },
+};
+
+function initModals() {
+  const modalOverlay = document.getElementById('details-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const modalTitle = document.getElementById('modal-title');
+  const modalBody = document.getElementById('modal-body');
+
+  if (!modalOverlay || !modalCloseBtn) return;
+
+  function closeModal() {
+    modalOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function openModal() {
+    modalOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  modalCloseBtn.addEventListener('click', closeModal);
+
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('open')) {
+      closeModal();
+    }
+  });
+
+  // Project "View Details" buttons
+  const projectDetailButtons = document.querySelectorAll('[data-project-key]');
+  projectDetailButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const key = btn.getAttribute('data-project-key');
+      const project = PROJECT_DATA[key];
+      if (!project) return;
+
+      modalTitle.textContent = project.title;
+
+      modalBody.innerHTML = `
+        <div style="border-radius: var(--radius-md); overflow: hidden; max-height: 280px; background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
+          <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 100%; object-fit: cover;" />
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-primary); margin-bottom: 6px; text-transform: uppercase;">
+            ${project.category}
+          </div>
+          <p style="font-size: 1rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 18px;">
+            ${project.description}
+          </p>
+        </div>
+        <div style="border-top: 1px solid var(--border-subtle); padding-top: 16px;">
+          <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">
+            Key Highlights & Engineering Focus:
+          </h4>
+          <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem; color: var(--text-secondary);">
+            ${project.features
+              .map(
+                (f) =>
+                  `<li style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="color: var(--accent-primary); font-weight: bold;">✓</span>
+                    <span>${f}</span>
+                  </li>`
+              )
+              .join('')}
+          </ul>
+        </div>
+        <div style="border-top: 1px solid var(--border-subtle); padding-top: 16px;">
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px;">Technologies Used:</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.85rem; color: var(--text-primary);">
+            ${project.technologies.join(' · ')}
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap;">
+          <a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 10px 20px; font-size: 0.88rem;">
+            <span>Open Live App</span> →
+          </a>
+          <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 10px 20px; font-size: 0.88rem;">
+            <span>GitHub Code</span>
+          </a>
+          <button class="btn-secondary" onclick="document.getElementById('details-modal').classList.remove('open'); document.body.style.overflow='';" style="padding: 10px 18px; font-size: 0.88rem; margin-left: auto;">
+            Close Preview
+          </button>
+        </div>
+      `;
+
+      openModal();
+    });
+  });
+
+  // Certificate "View Certificate" buttons
+  const certButtons = document.querySelectorAll('[data-cert-key]');
+  certButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const key = btn.getAttribute('data-cert-key');
+      const cert = CERTIFICATE_DATA[key];
+      if (!cert) return;
+
+      modalTitle.textContent = 'Certificate Verification';
+
+      modalBody.innerHTML = `
+        <div style="padding: 30px 24px; text-align: center; background: var(--bg-card); border: 1px dashed var(--accent-primary); border-radius: var(--radius-lg);">
+          <div style="font-size: 2.5rem; margin-bottom: 12px;">🎓</div>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px;">
+            ${cert.title}
+          </h3>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px;">
+            Issued by <strong style="color: var(--accent-primary);">${cert.issuer}</strong> · ${cert.date}
+          </p>
+          <div style="display: inline-block; font-family: var(--font-mono); font-size: 0.82rem; background: var(--bg-secondary); padding: 6px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); color: var(--text-muted); margin-bottom: 18px;">
+            Credential ID: ${cert.id}
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); max-width: 480px; margin: 0 auto;">
+            ${cert.description}
+          </p>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 18px;">
+          <span style="font-size: 0.82rem; color: var(--accent-emerald); font-weight: 600;">
+            ● Verified Student Credential
+          </span>
+          <button class="btn-secondary" onclick="document.getElementById('details-modal').classList.remove('open'); document.body.style.overflow='';" style="padding: 8px 18px; font-size: 0.86rem;">
+            Done
+          </button>
+        </div>
+      `;
+
+      openModal();
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   10. Resume Actions & Modal (Without window.alert)
+   -------------------------------------------------------------------------- */
+function initResumeActions() {
+  const downloadBtn = document.getElementById('btn-download-resume');
+  const viewResumeBtn = document.getElementById('btn-view-resume');
+  const modalOverlay = document.getElementById('details-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalBody = document.getElementById('modal-body');
+
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', (e) => {
+      // If href is still a placeholder hash
+      if (downloadBtn.getAttribute('href') === '#') {
+        e.preventDefault();
+        showToast(
+          'Resume File Placeholder',
+          'To link your actual PDF, place your file in /assets and update href in index.html.'
+        );
+      }
+    });
+  }
+
+  if (viewResumeBtn && modalOverlay && modalTitle && modalBody) {
+    viewResumeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modalTitle.textContent = 'Maahera Noushin K M — Curriculum Vitae';
+
+      modalBody.innerHTML = `
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 22px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px; margin-bottom: 14px;">
+              <div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary);">MAAHERA NOUSHIN K M</h3>
+                <p style="font-size: 0.85rem; color: var(--accent-primary);">AI & Data Science Student · Aspiring AI Engineer</p>
+              </div>
+              <div style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">
+                maahera2007@gmail.com
+              </div>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary); font-weight: 700; margin-bottom: 6px;">
+                Summary
+              </h4>
+              <p style="font-size: 0.88rem; line-height: 1.6; color: var(--text-secondary);">
+                Undergraduate scholar in Artificial Intelligence & Data Science passionate about machine learning, computer vision, pathfinding algorithms, and building robust, real-world intelligent systems like MediShield AI.
+              </p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary); font-weight: 700; margin-bottom: 6px;">
+                Core Technical Skills
+              </h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                <strong>Languages:</strong> Python, Java, C, JavaScript<br/>
+                <strong>AI & DS:</strong> Machine Learning, Deep Learning, A* Search, Scikit-Learn, OpenCV, Anomaly Detection<br/>
+                <strong>Tools:</strong> MATLAB, Google Colab, Jupyter Notebook, Git, GitHub
+              </p>
+            </div>
+
+            <div>
+              <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary); font-weight: 700; margin-bottom: 6px;">
+                Featured Project Highlights
+              </h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                • <strong>MediShield AI:</strong> Real-time healthcare defense and clinical anomaly triage engine (Live at medishield-ai.ai.studio).<br/>
+                • <strong>AI Search & Rescue Drone:</strong> Obstacle avoidance and terrain exploration using modified A* search.<br/>
+                • <strong>Deepfake Predictor:</strong> Media forensics identifying synthetic facial manipulation.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 14px; justify-content: flex-end; flex-wrap: wrap;">
+            <a href="https://medishield-ai.ai.studio/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 10px 20px; font-size: 0.88rem;">
+              <span>View MediShield AI Live</span>
+            </a>
+            <button class="btn-secondary" onclick="document.getElementById('details-modal').classList.remove('open'); document.body.style.overflow='';" style="padding: 10px 18px; font-size: 0.88rem;">
+              Close
+            </button>
+          </div>
+        </div>
+      `;
+
+      modalOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. Contact Form Validation & Feedback
+   -------------------------------------------------------------------------- */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const nameInput = document.getElementById('contact-name');
+  const emailInput = document.getElementById('contact-email');
+  const subjectInput = document.getElementById('contact-subject');
+  const messageInput = document.getElementById('contact-message');
+  const submitBtn = document.getElementById('contact-submit-btn');
+
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  function setError(input, message) {
+    input.classList.add('error');
+    const errorDisplay = input.parentElement?.querySelector('.form-error-msg');
+    if (errorDisplay) {
+      errorDisplay.textContent = message;
+      errorDisplay.classList.add('visible');
+    }
+  }
+
+  function clearError(input) {
+    input.classList.remove('error');
+    const errorDisplay = input.parentElement?.querySelector('.form-error-msg');
+    if (errorDisplay) {
+      errorDisplay.textContent = '';
+      errorDisplay.classList.remove('visible');
+    }
+  }
+
+  [nameInput, emailInput, subjectInput, messageInput].forEach((input) => {
+    if (!input) return;
+    input.addEventListener('input', () => clearError(input));
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let isValid = true;
+
+    // Validate Name
+    if (!nameInput.value.trim()) {
+      setError(nameInput, 'Please provide your full name.');
+      isValid = false;
+    } else if (nameInput.value.trim().length < 2) {
+      setError(nameInput, 'Name must be at least 2 characters.');
+      isValid = false;
+    } else {
+      clearError(nameInput);
+    }
+
+    // Validate Email
+    if (!emailInput.value.trim()) {
+      setError(emailInput, 'Email address is required.');
+      isValid = false;
+    } else if (!validateEmail(emailInput.value.trim())) {
+      setError(emailInput, 'Please enter a valid email address.');
+      isValid = false;
+    } else {
+      clearError(emailInput);
+    }
+
+    // Validate Subject
+    if (!subjectInput.value.trim()) {
+      setError(subjectInput, 'Please provide a subject for your message.');
+      isValid = false;
+    } else {
+      clearError(subjectInput);
+    }
+
+    // Validate Message
+    if (!messageInput.value.trim()) {
+      setError(messageInput, 'Message cannot be empty.');
+      isValid = false;
+    } else if (messageInput.value.trim().length < 10) {
+      setError(messageInput, 'Message should be at least 10 characters.');
+      isValid = false;
+    } else {
+      clearError(messageInput);
+    }
+
+    if (!isValid) return;
+
+    // Button loading state
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<span>Sending Message...</span>`;
+
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+
+      showToast(
+        'Message Sent Successfully!',
+        'Thank you for reaching out. I will respond to your email shortly.'
+      );
+
+      form.reset();
+    }, 1000);
+  });
+}
+
+/* --------------------------------------------------------------------------
+   12. Back to Top Button
+   -------------------------------------------------------------------------- */
+function initBackToTop() {
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (!backToTopBtn) return;
+
+  function toggleBackToTop() {
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  toggleBackToTop();
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+}
+
+</script>
+  </body>
+</html>
